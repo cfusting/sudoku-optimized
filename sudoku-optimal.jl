@@ -8,8 +8,8 @@ function is_valid(state::Array{Int64,2}, x::Int64, y::Int64)
         end
     end
     
-    x_from::Int64 = convert(Int64, (floor((x - 1) / 3) * 3) + 1)
-    y_from::Int64 = convert(Int64, (floor((y - 1) / 3) * 3) + 1)
+    x_from = ifloor((x - 1) / 3) * 3 + 1
+    y_from = ifloor((y - 1) / 3) * 3 + 1
     return isvalidinner(x_from, y_from, x, y, state)
 end
 
