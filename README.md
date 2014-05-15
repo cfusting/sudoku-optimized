@@ -17,3 +17,5 @@ diff sudoku.jl sudoku-optimal.jl | view -
 ```
 
 After optimization we observe nearly a 5x speed increase.
+
+Thanks @firstEncounter for translating the solver from Javascript.
