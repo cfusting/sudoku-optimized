@@ -32,7 +32,7 @@ function next_state(state::Array{Int64,2}, x::Int64, y::Int64)
     end
     
     if state[x,y] != 0
-        if is_valid(state, x, y)
+        if !is_valid(state, x, y)
             return false
         end
         return next_state(state, x, y + 1)
@@ -60,5 +60,10 @@ board = [
    0 8 0 0 0 0 0 2 0;
    4 0 0 2 0 0 0 0 0
 ]
-@time next_state(board, 1, 1)
+board_fresh = copy(board)
+println(board)
+next_state(board, 1, 1)
+println(board)
+println(board_fresh)
+@time next_state(board_fresh, 1, 1)
 println(board)
