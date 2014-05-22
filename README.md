@@ -1,4 +1,4 @@
-sudoku-optimal
+sudoku-optimized
 ==============
 
 Example of optimizing a Sudoku solver in Julia.
